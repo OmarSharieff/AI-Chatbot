@@ -1,9 +1,10 @@
-import React from 'react'
+import { SignUp } from '@clerk/clerk-react';
+import './signUpPage.css';
 
 function SignUpPage() {
   return (
-    <div>
-      
+    <div className='signUpPage'>
+      <SignUp path="/sign-up"/>
     </div>
   )
 }
