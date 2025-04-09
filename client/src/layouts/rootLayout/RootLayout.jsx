@@ -1,7 +1,7 @@
 import React from "react";
 import "./rootLayout.css";
 import { Link, Outlet } from "react-router-dom";
-import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/clerk-react"
+import { SignedOut, SignInButton, SignedIn, UserButton, ClerkProvider } from "@clerk/clerk-react"
 
 function RootLayout() {
   const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -13,7 +13,7 @@ function RootLayout() {
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
       <div className="rootLayout">
         <header>
-          <Link to="/">
+          <Link to="/" className="logo">
             <img src="/logo.png" alt="" />
             <span>LAMA AI</span>
           </Link>
